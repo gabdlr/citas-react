@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { Paciente } from "../types/Paciente";
 import { Error } from "./ErrorClass";
+import { FormularioProps } from "../models/FormularioProps";
 export default function Formulario(props: FormularioProps) {
   const {
     handlers: { setPaciente, setPacienteEnEdicion },
@@ -166,12 +167,4 @@ export default function Formulario(props: FormularioProps) {
       </form>
     </div>
   );
-}
-
-interface FormularioProps {
-  handlers: {
-    setPaciente: (paciente: Paciente) => void;
-    setPacienteEnEdicion: React.Dispatch<React.SetStateAction<Paciente | null>>;
-  };
-  pacienteEnEdicion: Paciente | null;
 }
