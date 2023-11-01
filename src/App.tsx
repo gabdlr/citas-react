@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Formulario from "./components/Formulario";
-import Header from "./components/Header";
+import Header from "./components/HeaderClass";
 import ListadoPacientes from "./components/ListadoPacientes";
 import { Paciente } from "./types/Paciente";
 import { ContextoPacienteEnEdicion } from "./contexts/PacienteEditarContext";
