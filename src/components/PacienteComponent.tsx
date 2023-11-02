@@ -1,4 +1,4 @@
-import { Paciente } from "../types/Paciente";
+import { PacienteComponentProps } from "../models/PacienteComponentProps";
 import { BotonFormulario } from "./BotonFormulario";
 export default function PacienteComponent(props: PacienteComponentProps) {
   const { paciente, setPacienteEnEdicion, eliminarPaciente } = props;
@@ -39,10 +39,4 @@ export default function PacienteComponent(props: PacienteComponentProps) {
       </div>
     </div>
   );
-}
-
-interface PacienteComponentProps {
-  paciente: Paciente;
-  setPacienteEnEdicion: React.Dispatch<React.SetStateAction<Paciente | null>>;
-  eliminarPaciente: (paciente: Paciente) => void;
 }

@@ -1,5 +1,5 @@
 import { Paciente } from "../types/Paciente";
-import PacienteComponent from "./PacienteComponent";
+import { PacienteComponent } from "./PacienteComponentClass";
 import { uuid } from "./../utils/idGenerator";
 
 export default function ListadoPacientes(props: ListadoPacientesProps) {
