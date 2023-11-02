@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { Formulario } from "./components/FormularioClass";
 import { Header } from "./components/HeaderClass";
-import ListadoPacientes from "./components/ListadoPacientes";
+import { ListadoPacientes } from "./components/ListadoPacientesClass";
 import { Paciente } from "./types/Paciente";
 import { ContextoPacienteEnEdicion } from "./contexts/PacienteEditarContext";
 import { uuid } from "./utils/idGenerator";

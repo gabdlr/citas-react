@@ -1,8 +1,8 @@
-import { Paciente } from "../types/Paciente";
 import { PacienteComponent } from "./PacienteComponentClass";
 import { uuid } from "./../utils/idGenerator";
+import { ListadoPacientesProps } from "../models/ListadoPacientesProps";
 
-export default function ListadoPacientes(props: ListadoPacientesProps) {
+export function ListadoPacientes(props: ListadoPacientesProps) {
   const {
     handlers: { eliminarPaciente, setPacienteEnEdicion },
     pacientes,
@@ -36,12 +36,4 @@ export default function ListadoPacientes(props: ListadoPacientesProps) {
       )}
     </div>
   );
-}
-
-interface ListadoPacientesProps {
-  pacientes: Paciente[];
-  handlers: {
-    setPacienteEnEdicion: React.Dispatch<React.SetStateAction<Paciente | null>>;
-    eliminarPaciente: (paciente: Paciente) => void;
-  };
 }
