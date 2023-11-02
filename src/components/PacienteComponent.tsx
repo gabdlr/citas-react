@@ -1,5 +1,5 @@
 import { PacienteComponentProps } from "../models/PacienteComponentProps";
-import { BotonFormulario } from "./BotonFormulario";
+import { BotonFormulario } from "./BotonFormularioClass";
 export default function PacienteComponent(props: PacienteComponentProps) {
   const { paciente, setPacienteEnEdicion, eliminarPaciente } = props;
   return (

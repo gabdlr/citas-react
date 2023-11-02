@@ -1,6 +1,6 @@
-import { Paciente } from "../types/Paciente";
+import { BotonFormularioProps } from "../models/BotonFormularioProps";
 
-export function BotonFormulario(props: Props) {
+export function BotonFormulario(props: BotonFormularioProps) {
   const { texto, clases, onClick, paciente } = props;
   return (
     <button onClick={() => onClick(paciente)} className={clases}>
@@ -8,13 +8,3 @@ export function BotonFormulario(props: Props) {
     </button>
   );
 }
-
-interface Props {
-  texto?: string;
-  clases?: string;
-  //eslint-disable-next-line
-  onClick: Function;
-  paciente: Paciente;
-}
-//Es horrible esto, alto nivel de acoplamiento
-//pensar como pasarle un generico
