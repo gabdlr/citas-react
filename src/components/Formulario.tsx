@@ -66,20 +66,29 @@ export default function Formulario(props: FormularioProps) {
   };
 
   return (
-    <div className="md:w-1/2 lg:w-2/5 mx-3 md:mx-0">
+    <div
+      className="md:w-1/2 lg:w-2/5 mx-3 md:mx-0"
+      data-testId="pacientFormContainer"
+    >
       {error ? (
         <Error>
           <p>Todos los campos son obligatorios</p>
         </Error>
       ) : null}
-      <h2 className="font-black text-3xl text-center">Seguimiento pacientes</h2>
+      <h2
+        className="font-black text-3xl text-center"
+        data-testId="formContainerSubtitle"
+      >
+        Seguimiento pacientes
+      </h2>
       <p className="text-xl mt-5 text-center mb-10">
         Añade pacientes y{" "}
         <span className="text-indigo-600 font-bold">administralos</span>
       </p>
       <form
-        onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+        data-testId="pacientForm"
+        onSubmit={handleSubmit}
       >
         <div className="mb-5">
           <label
@@ -90,11 +99,12 @@ export default function Formulario(props: FormularioProps) {
           </label>
           <input
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            data-testId="pacientNameInput"
             id="nombre"
+            onChange={(event) => setNombre(event.target.value)}
             placeholder="Nombre de la mascota"
             type="text"
             value={nombre}
-            onChange={(event) => setNombre(event.target.value)}
           />
         </div>
         <div className="mb-5">
@@ -106,11 +116,12 @@ export default function Formulario(props: FormularioProps) {
           </label>
           <input
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            data-testId="pacientOwnerNameInput"
             id="propietario"
+            onChange={(event) => setPropietario(event.target.value)}
             placeholder="Nombre del propietario"
             type="text"
             value={propietario}
-            onChange={(event) => setPropietario(event.target.value)}
           />
         </div>
         <div className="mb-5">
@@ -122,11 +133,12 @@ export default function Formulario(props: FormularioProps) {
           </label>
           <input
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            data-testId="pacientEmailInput"
             id="email"
+            onChange={(event) => setEmail(event.target.value)}
             placeholder="Email de contacto del propietario"
             type="email"
             value={email}
-            onChange={(event) => setEmail(event.target.value)}
           />
         </div>
         <div className="mb-5">
@@ -138,10 +150,11 @@ export default function Formulario(props: FormularioProps) {
           </label>
           <input
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            data-testId="signUpDateInput"
             id="fechaAlta"
+            onChange={(event) => setFechaAlta(event.target.value)}
             type="date"
             value={fechaAlta}
-            onChange={(event) => setFechaAlta(event.target.value)}
           />
         </div>
         <div className="mb-5">
@@ -153,14 +166,16 @@ export default function Formulario(props: FormularioProps) {
           </label>
           <textarea
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+            data-testId="pacientSymptomsInput"
             id="sintomas"
+            onChange={(event) => setSintomas(event.target.value)}
             placeholder="Describe los sintomas"
             value={sintomas}
-            onChange={(event) => setSintomas(event.target.value)}
           ></textarea>
         </div>
         <input
           className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
+          data-testId="submitButtonId"
           type="submit"
           value={id ? "Editar paciente" : "Agregar paciente"}
         />

@@ -80,13 +80,19 @@ export class Formulario extends Component {
 
   render() {
     return (
-      <div className="md:w-1/2 lg:w-2/5 mx-3 md:mx-0">
+      <div
+        className="md:w-1/2 lg:w-2/5 mx-3 md:mx-0"
+        data-testId="pacientFormContainer"
+      >
         {this.state.error && (
           <Error>
             <p>Todos los campos son obligatorios</p>
           </Error>
         )}
-        <h2 className="font-black text-3xl text-center">
+        <h2
+          className="font-black text-3xl text-center"
+          data-testId="formContainerSubtitle"
+        >
           Seguimiento pacientes
         </h2>
         <p className="text-xl mt-5 text-center mb-10">
@@ -94,8 +100,9 @@ export class Formulario extends Component {
           <span className="text-indigo-600 font-bold">administralos</span>
         </p>
         <form
-          onSubmit={(e) => this.handleSubmit(e)}
           className="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+          data-testId="pacientForm"
+          onSubmit={(e) => this.handleSubmit(e)}
         >
           <div className="mb-5">
             <label
@@ -106,13 +113,14 @@ export class Formulario extends Component {
             </label>
             <input
               className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+              data-testId="pacientNameInput"
               id="nombre"
-              placeholder="Nombre de la mascota"
-              type="text"
-              value={this.state.nombre}
               onChange={(event) =>
                 this.setState({ ...this.state, nombre: event.target.value })
               }
+              placeholder="Nombre de la mascota"
+              type="text"
+              value={this.state.nombre}
             />
           </div>
           <div className="mb-5">
@@ -124,16 +132,17 @@ export class Formulario extends Component {
             </label>
             <input
               className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+              data-testId="pacientOwnerNameInput"
               id="propietario"
-              placeholder="Nombre del propietario"
-              type="text"
-              value={this.state.propietario}
               onChange={(event) =>
                 this.setState({
                   ...this.state,
                   propietario: event.target.value,
                 })
               }
+              placeholder="Nombre del propietario"
+              type="text"
+              value={this.state.propietario}
             />
           </div>
           <div className="mb-5">
@@ -145,16 +154,17 @@ export class Formulario extends Component {
             </label>
             <input
               className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+              data-testId="pacientEmailInput"
               id="email"
-              placeholder="Email de contacto del propietario"
-              type="email"
-              value={this.state.email}
               onChange={(event) =>
                 this.setState({
                   ...this.state,
                   email: event.target.value,
                 })
               }
+              placeholder="Email de contacto del propietario"
+              type="email"
+              value={this.state.email}
             />
           </div>
           <div className="mb-5">
@@ -166,15 +176,16 @@ export class Formulario extends Component {
             </label>
             <input
               className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+              data-testId="signUpDateInput"
               id="fechaAlta"
-              type="date"
-              value={this.state.fechaAlta}
               onChange={(event) =>
                 this.setState({
                   ...this.state,
                   fechaAlta: event.target.value,
                 })
               }
+              type="date"
+              value={this.state.fechaAlta}
             />
           </div>
           <div className="mb-5">
@@ -186,19 +197,21 @@ export class Formulario extends Component {
             </label>
             <textarea
               className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+              data-testId="pacientSymptomsInput"
               id="sintomas"
-              placeholder="Describe los sintomas"
-              value={this.state.sintomas}
               onChange={(event) =>
                 this.setState({
                   ...this.state,
                   sintomas: event.target.value,
                 })
               }
+              placeholder="Describe los sintomas"
+              value={this.state.sintomas}
             ></textarea>
           </div>
           <input
             className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors"
+            data-testId="submitButtonId"
             type="submit"
             value={this.state.id ? "Editar paciente" : "Agregar paciente"}
           />
