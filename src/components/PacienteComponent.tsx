@@ -6,34 +6,34 @@ export default function PacienteComponent(props: PacienteComponentProps) {
     <div className="m-3 bg-white shadow-md px-5 py-10 rounded-xl">
       <p
         className="font-bold mb-3 text-gray-700 uppercase"
-        data-testId="pacientCardField"
+        data-testid="pacientCardField"
       >
         Nombre:{" "}
         <span className="font-normal normal-case">{paciente.nombre}</span>
       </p>
       <p
         className="font-bold mb-3 text-gray-700 uppercase"
-        data-testId="pacientCardField"
+        data-testid="pacientCardField"
       >
         Propietario:{" "}
         <span className="font-normal normal-case">{paciente.propietario}</span>
       </p>
       <p
         className="font-bold mb-3 text-gray-700 uppercase"
-        data-testId="pacientCardField"
+        data-testid="pacientCardField"
       >
         Email: <span className="font-normal normal-case">{paciente.email}</span>
       </p>
       <p
         className="font-bold mb-3 text-gray-700 uppercase"
-        data-testId="pacientCardField"
+        data-testid="pacientCardField"
       >
         Fecha alta:{" "}
         <span className="font-normal normal-case">{paciente.fechaAlta}</span>
       </p>
       <p
         className="font-bold mb-3 text-gray-700 uppercase"
-        data-testId="pacientCardField"
+        data-testid="pacientCardField"
       >
         Sintomas:{" "}
         <span className="font-normal normal-case">{paciente.sintomas}</span>

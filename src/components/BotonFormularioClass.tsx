@@ -8,7 +8,7 @@ export class BotonFormulario extends Component {
       <button
         onClick={() => this.props.onClick(this.props.paciente)}
         className={this.props.clases}
-        data-testId={this.props.testId}
+        data-testid={this.props.testId}
       >
         {this.props.texto}
       </button>

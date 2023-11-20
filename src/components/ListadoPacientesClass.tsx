@@ -13,7 +13,7 @@ export class ListadoPacientes extends Component {
           <>
             <h2
               className="font-black text-3xl text-center"
-              data-testId="pacientListSubtitle"
+              data-testid="pacientListSubtitle"
             >
               Listado pacientes
             </h2>
@@ -21,7 +21,7 @@ export class ListadoPacientes extends Component {
               Administra tus{" "}
               <span className="text-indigo-600 font-bold">pacientes</span>
             </p>
-            <div data-testId="pacientList">
+            <div data-testid="pacientList">
               {this.props.pacientes.map((paciente) => (
                 <PacienteComponent
                   key={uuid()}
@@ -38,7 +38,7 @@ export class ListadoPacientes extends Component {
           <>
             <h2
               className="font-black text-3xl text-center"
-              data-testId="pacientListSubtitle"
+              data-testid="pacientListSubtitle"
             >
               No hay pacientes
             </h2>

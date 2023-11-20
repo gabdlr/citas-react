@@ -10,7 +10,7 @@ export class PacienteComponent extends Component {
       <div className="m-3 bg-white shadow-md px-5 py-10 rounded-xl">
         <p
           className="font-bold mb-3 text-gray-700 uppercase"
-          data-testId="pacientCardField"
+          data-testid="pacientCardField"
         >
           Nombre:{" "}
           <span className="font-normal normal-case">
@@ -19,7 +19,7 @@ export class PacienteComponent extends Component {
         </p>
         <p
           className="font-bold mb-3 text-gray-700 uppercase"
-          data-testId="pacientCardField"
+          data-testid="pacientCardField"
         >
           Propietario:{" "}
           <span className="font-normal normal-case">
@@ -28,7 +28,7 @@ export class PacienteComponent extends Component {
         </p>
         <p
           className="font-bold mb-3 text-gray-700 uppercase"
-          data-testId="pacientCardField"
+          data-testid="pacientCardField"
         >
           Email:{" "}
           <span className="font-normal normal-case">
@@ -37,7 +37,7 @@ export class PacienteComponent extends Component {
         </p>
         <p
           className="font-bold mb-3 text-gray-700 uppercase"
-          data-testId="pacientCardField"
+          data-testid="pacientCardField"
         >
           Fecha alta:{" "}
           <span className="font-normal normal-case">
@@ -46,7 +46,7 @@ export class PacienteComponent extends Component {
         </p>
         <p
           className="font-bold mb-3 text-gray-700 uppercase"
-          data-testId="pacientCardField"
+          data-testid="pacientCardField"
         >
           Sintomas:{" "}
           <span className="font-normal normal-case">

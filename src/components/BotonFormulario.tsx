@@ -6,7 +6,7 @@ export function BotonFormulario(props: BotonFormularioProps) {
     <button
       onClick={() => onClick(paciente)}
       className={clases}
-      data-testId={testId}
+      data-testid={testId}
     >
       {texto}
     </button>

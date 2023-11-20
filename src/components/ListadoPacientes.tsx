@@ -13,7 +13,7 @@ export function ListadoPacientes(props: ListadoPacientesProps) {
         <>
           <h2
             className="font-black text-3xl text-center"
-            data-testId="pacientListSubtitle"
+            data-testid="pacientListSubtitle"
           >
             Listado pacientes
           </h2>
@@ -21,7 +21,7 @@ export function ListadoPacientes(props: ListadoPacientesProps) {
             Administra tus{" "}
             <span className="text-indigo-600 font-bold">pacientes</span>
           </p>
-          <div data-testId="pacientList">
+          <div data-testid="pacientList">
             {pacientes.map((paciente) => (
               <PacienteComponent
                 key={uuid()}
@@ -36,7 +36,7 @@ export function ListadoPacientes(props: ListadoPacientesProps) {
         <>
           <h2
             className="font-black text-3xl text-center"
-            data-testId="pacientListSubtitle"
+            data-testid="pacientListSubtitle"
           >
             No hay pacientes
           </h2>
