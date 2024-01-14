@@ -62,9 +62,10 @@ test("should edit a patient date", async () => {
   const NEW_PATIENT_NAME = "test new name";
   render(<App />);
   await addPatient();
-  const editButton = (await screen.findByTestId(
-    "pacientCardEditButton"
-  )) as HTMLButtonElement;
+  await addPatient();
+  const editButton = (
+    await screen.findAllByTestId("pacientCardEditButton")
+  )[0] as HTMLButtonElement;
   fireEvent.click(editButton);
   const pacientNameInput = (await screen.findByTestId(
     "pacientNameInput"
